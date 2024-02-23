@@ -1,4 +1,4 @@
-# Minimo
+# ![minimo_logo_registered](/app/static/pixel_logo.png)  Minimo
 We take minimalist approaches to ML & AI. Cost efficient applications for low-budget scenarios.
 
 ## Local AI Agents

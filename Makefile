@@ -1,3 +1,9 @@
+run_streamlit:
+	@echo "Running Streamlit app"
+	@streamlit run app/main.py
+	@echo "Done"
+
+
 run_example:
 	@echo "Running example"
 	@python3 app/example.py
