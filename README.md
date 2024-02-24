@@ -4,7 +4,13 @@ We take minimalist approaches to ML & AI. Cost efficient applications for low-bu
 ## Local AI Agents
 This is a freeware tool to demonstrate how we can run AI agents on simple computers.
 
-# How-to-run
+# Demo
+
+    Utilize language models locally to perform common tasks.
+
+    Here is an example of text classification app. The same components can be used to automate processes through any platforms like data lakes, dbs, etc ...
+
+    
 
 ## Requirements
 
