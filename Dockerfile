@@ -16,6 +16,7 @@ RUN apt-get update \
 # Install Python dependencies
 COPY requirements.txt /app/requirements.txt
 WORKDIR /app
+ARG PIP_EXTRA_INDEX_URL="https://download.pytorch.org/whl/cpu"
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt \
     && rm -rf /root/.cache/pip
@@ -25,6 +26,7 @@ WORKDIR /app
 
 # Copy the example.py file into the container
 COPY /app/example.py .
+COPY .env .
 
 
 # Run the example.py file when the container starts

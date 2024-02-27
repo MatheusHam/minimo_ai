@@ -1,3 +1,4 @@
-keras
-keras_nlp
-tensorflow
+transformers==4.38.1
+pandas==2.2.0
+python-dotenv
+torch

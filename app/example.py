@@ -1,16 +1,14 @@
-import os
-# import keras
-# import keras_nlp
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
-print(os.environ["KAGGLE_USERNAME"])
+from dotenv import load_dotenv
 
-# gemma_lm = keras_nlp.models.GemmaCausalLM.from_preset("gemma_instruct_2b_en")
+load_dotenv()
 
+tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b-it")
+model = AutoModelForCausalLM.from_pretrained("google/gemma-2b-it")
 
-# a = "<start_of_turn>user"
-# b = "Write a hello world program<end_of_turn>"
-# c = "<start_of_turn>model"
-# chat = a+b+c
-# test = gemma_lm.generate(chat, max_length=150)
+input_text = "Write me a poem about Machine Learning."
+input_ids = tokenizer(input_text, return_tensors="pt")
 
-# print(test)
+outputs = model.generate(**input_ids)
+print(tokenizer.decode(outputs[0]))
